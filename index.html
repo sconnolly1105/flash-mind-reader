@@ -158,7 +158,9 @@
 
   .symbol-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(66px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)); */
+    /* Sean Connolly addition */
+    grid-template-columns: repeat(10, 1fr);
     gap: 5px; margin: 0.75rem 0 1.75rem;
   }
 
@@ -244,7 +246,8 @@
 
   @media (max-width: 560px) {
     .card { padding: 1.5rem 1.1rem; }
-    .symbol-grid { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: 4px; }
+    /* Sean Connolly commented out the code below */    
+    .symbol-grid { /* grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); */ gap: 4px; }
     .sym-glyph { font-size: 1.3rem; }
   }
 </style>
