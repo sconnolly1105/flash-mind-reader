@@ -449,6 +449,7 @@ function triggerReveal(){
 }
 
 // Synthesised screech via Web Audio API — no audio file needed
+/* Sean Connnolly commented out this playScreech function
 function playScreech(){
   try{
     const ctx=new(window.AudioContext||window.webkitAudioContext)();
@@ -491,8 +492,20 @@ function playScreech(){
     g3.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.2);
     o3.start(ctx.currentTime); o3.stop(ctx.currentTime+0.2);
 
-  }catch(e){ /* audio blocked — silent fail */ }
+  }catch(e){ /* audio blocked — silent fail  }
 }
+End of Sean Connolly commenting out changes */
+
+// Synthesised screech via Web Audio API — no audio file needed
+// Sean Connnolly added this playScreech function
+function playScreech(){
+  try{
+    const audio = new Audio('https://quicksounds.com/uploads/tracks/1596133117_180207097_931721455.mp3');
+    audio.volume = 1.0;
+    audio.play();
+  }catch(e){ /* silent fail */ }
+}
+// End of Sean Connolly changes
 
 // Reset for another game
 function resetGame(){
